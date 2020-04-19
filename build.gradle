@@ -75,14 +75,14 @@ dependencies {
      * MVP模式+Retrofit1+OkHttp+Gson2.0+Dagger2
      */
     api rootProject.ext.dependencies.retrofit2
-    api rootProject.ext.dependencies.rxjava2
+    api rootProject.ext.dependencies.rxjava3
     api rootProject.ext.dependencies.rxandroid2
     api rootProject.ext.dependencies.retrofit2adapter
     api rootProject.ext.dependencies.retrofit2gson
     //api rootProject.ext.dependencies.rxcache
     //api rootProject.ext.dependencies.rxcacheJolyglotGson
-    api rootProject.ext.dependencies.gson2
-    api rootProject.ext.dependencies.okhttp3
+    //api rootProject.ext.dependencies.gson2
+    //api rootProject.ext.dependencies.okhttp3//// 由于retrofit2内部已经集成okhttp3,所以不需要再依赖Okhttp了
     api rootProject.ext.dependencies.dagger2
     annotationProcessor rootProject.ext.dependencies.dagger2Compiler
     // 使用apt build dagger-compiler编译器
@@ -91,4 +91,15 @@ dependencies {
      */
     api rootProject.ext.dependencies.javaxAannotation
     implementation 'com.android.support:support-annotations:28.0.0'// 必须配置，缺少javax.annotation包
+
+    /**
+     * MVP模式:Retrofit2+OkHttp3+Gson
+     */
+    api rootProject.ext.dependencies.retrofit2
+    // compile rootProject.ext.dependencies.okHttp3 // 由于retrofit2内部已经集成okhttp3,所以不需要再依赖Okhttp了
+    api rootProject.ext.dependencies.converterGson
+    api rootProject.ext.dependencies.loggingInterceptor
+    api rootProject.ext.dependencies.rxjava2Adapter
+    // api rootProject.ext.dependencies.rxjava2
+    // api rootProject.ext.dependencies.rxandroid2
 }
