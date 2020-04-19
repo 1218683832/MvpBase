@@ -5,9 +5,9 @@ import android.content.Context;
 import com.mrrun.lib.mvpbase.app.MvpApplication;
 import com.mrrun.lib.mvpbase.app.Navigator;
 import com.mrrun.lib.mvpbase.dagger.scope.ApplicationScope;
-import com.mrrun.lib.mvpbase.executor.MRBackgroundExecutor;
-import com.mrrun.lib.mvpbase.executor.ThreadPool;
-import com.mrrun.lib.mvpbase.executor.base.BackgroundExecutor;
+//import com.mrrun.lib.mvpbase.executor.MRBackgroundExecutor;
+//import com.mrrun.lib.mvpbase.executor.ThreadPool;
+//import com.mrrun.lib.mvpbase.executor.base.BackgroundExecutor;
 
 import dagger.Module;
 import dagger.Provides;
@@ -33,11 +33,11 @@ public class ApplicationModule {
         return this.mApplication;
     }
 
-    @ApplicationScope
-    @Provides
-    public BackgroundExecutor provideBackgroundExecutor() {
-        return new MRBackgroundExecutor(ThreadPool.getThreadPool());
-    }
+//    @ApplicationScope
+//    @Provides
+//    public BackgroundExecutor provideBackgroundExecutor() {
+//        return new MRBackgroundExecutor(ThreadPool.getThreadPool());
+//    }
 
     @ApplicationScope
     @Provides

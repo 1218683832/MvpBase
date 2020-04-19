@@ -59,6 +59,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')//编译lib目录下的.jar文件
     implementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
+        exclude module: 'annotations'
     })
     /**
      * 配置android-apt
@@ -71,24 +72,13 @@ dependencies {
     implementation rootProject.ext.dependencies.cardviewV7
     implementation rootProject.ext.dependencies.constraintLayout
     testImplementation rootProject.ext.dependencies.junit
-    /**
-     * MVP模式+Retrofit1+OkHttp+Gson2.0+Dagger2
-     */
-    api rootProject.ext.dependencies.retrofit2
-    api rootProject.ext.dependencies.rxjava3
-    api rootProject.ext.dependencies.rxandroid2
-    api rootProject.ext.dependencies.retrofit2adapter
-    api rootProject.ext.dependencies.retrofit2gson
-    //api rootProject.ext.dependencies.rxcache
-    //api rootProject.ext.dependencies.rxcacheJolyglotGson
-    //api rootProject.ext.dependencies.gson2
-    //api rootProject.ext.dependencies.okhttp3//// 由于retrofit2内部已经集成okhttp3,所以不需要再依赖Okhttp了
+//    /**
+//     * MVP模式+Retrofit1+OkHttp+Gson2.0+Dagger2
+//     */
+//    api rootProject.ext.dependencies.retrofit1
+//    api rootProject.ext.dependencies.gson2
+//    api rootProject.ext.dependencies.okHttp2
+//    api rootProject.ext.dependencies.okio
     api rootProject.ext.dependencies.dagger2
-    annotationProcessor rootProject.ext.dependencies.dagger2Compiler
-    // 使用apt build dagger-compiler编译器
-    /**
-     * 配置javax.annotation包
-     */
-    api rootProject.ext.dependencies.javaxAannotation
-    implementation 'com.android.support:support-annotations:28.0.0'// 必须配置，缺少javax.annotation包
+    annotationProcessor rootProject.ext.dependencies.dagger2Compiler// 使用apt build dagger-compiler编译器
 }

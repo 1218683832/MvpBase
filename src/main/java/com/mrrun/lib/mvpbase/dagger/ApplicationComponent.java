@@ -4,8 +4,6 @@ import android.content.Context;
 
 import com.mrrun.lib.mvpbase.app.Navigator;
 import com.mrrun.lib.mvpbase.dagger.scope.ApplicationScope;
-import com.mrrun.lib.mvpbase.executor.base.BackgroundExecutor;
-import com.mrrun.lib.mvpbase.network.NetService;
 
 import dagger.Component;
 
@@ -24,18 +22,18 @@ public interface ApplicationComponent {
      * @return
      */
     Context context();
-    /**
-     * 提供后台线程执行器
-     *
-     * @return
-     */
-    BackgroundExecutor backgroundExecutor();
-    /**
-     * 提供网络服务
-     *
-     * @return
-     */
-    NetService netService();
+//    /**
+//     * 提供后台线程执行器
+//     *
+//     * @return
+//     */
+//    BackgroundExecutor backgroundExecutor();
+//    /**
+//     * 提供网络服务
+//     *
+//     * @return
+//     */
+//    NetService netService();
     /**
      * 提供界面导航(跳转)
      *
