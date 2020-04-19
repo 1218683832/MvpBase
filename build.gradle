@@ -78,7 +78,6 @@ dependencies {
     api rootProject.ext.dependencies.rxjava3
     api rootProject.ext.dependencies.rxandroid2
     api rootProject.ext.dependencies.retrofit2adapter
-    api rootProject.ext.dependencies.retrofit2gson
     //api rootProject.ext.dependencies.rxcache
     //api rootProject.ext.dependencies.rxcacheJolyglotGson
     //api rootProject.ext.dependencies.gson2
